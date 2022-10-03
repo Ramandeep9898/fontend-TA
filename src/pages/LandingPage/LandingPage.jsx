@@ -22,7 +22,7 @@ export const LandingPage = () => {
           />
         </div>
         <div className="create-my-event-btn-div mrg-top34">
-          <Link to="/event">
+          <Link to="/create">
             <button className="create-my-event-btn">
               <span>
                 <GiPartyPopper /> Create my event
