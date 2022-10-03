@@ -1,5 +1,6 @@
 import "./landingpage.css";
 import { GiPartyPopper } from "react-icons/gi";
+import { Link } from "react-router-dom";
 
 export const LandingPage = () => {
   return (
@@ -21,11 +22,13 @@ export const LandingPage = () => {
           />
         </div>
         <div className="create-my-event-btn-div mrg-top34">
-          <button className="create-my-event-btn">
-            <span>
-              <GiPartyPopper /> Create my event
-            </span>{" "}
-          </button>
+          <Link to="/event">
+            <button className="create-my-event-btn">
+              <span>
+                <GiPartyPopper /> Create my event
+              </span>{" "}
+            </button>
+          </Link>
         </div>
       </main>
     </>
