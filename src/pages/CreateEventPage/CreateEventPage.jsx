@@ -6,14 +6,6 @@ import { useEvent } from "../../context/EventContext";
 
 export const CreateEventPage = () => {
   const { eventDetails, setEventDetails } = useEvent();
-  //   console.log(eventDetail);
-  //   const [eventDetails, setEventDetails] = useState({
-  //     eventName: "",
-  //     hostName: "",
-  //     time: "",
-  //     location: "",
-  //     photo: "",
-  //   });
 
   return (
     <>
@@ -74,7 +66,7 @@ export const CreateEventPage = () => {
                 onChange={(e) => {
                   setEventDetails({
                     ...eventDetails,
-                    time: e.target.value,
+                    startFrom: e.target.value,
                   });
                 }}
               />
@@ -93,7 +85,7 @@ export const CreateEventPage = () => {
                 onChange={(e) => {
                   setEventDetails({
                     ...eventDetails,
-                    time: e.target.value,
+                    endFrom: e.target.value,
                   });
                 }}
               />

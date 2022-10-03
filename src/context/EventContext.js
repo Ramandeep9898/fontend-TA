@@ -9,7 +9,8 @@ const EventProvider = ({ children }) => {
   const [eventDetails, setEventDetails] = useState({
     eventName: "",
     hostName: "",
-    time: "",
+    startFrom: "",
+    endFrom: "",
     location: "",
     photo: "",
   });

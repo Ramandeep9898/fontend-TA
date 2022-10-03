@@ -24,9 +24,9 @@ export const EventPage = () => {
             <BsCalendar />
           </div>
           <div className="event-date-details">
-            <div className="date-time">18 August 6:00PM</div>
+            <div className="date-time">{eventDetails.startFrom}</div>
             <div className="date-time-subheading mrg-top4">
-              to <span>19 August 1:00PM </span> UTC +10
+              to <span>{eventDetails.startFrom}</span> UTC +10
             </div>
           </div>
           <div className="more-details-arrow">
