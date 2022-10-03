@@ -1,22 +1,30 @@
-.login-container {
-  /* width: 100vw; */
-  height: 100%;
+.Create-Event-Heading {
+  text-align: center;
+  font-size: 32px;
+  color: var(--primary-darkest-blue);
+  font-weight: 700;
+}
+.event-details {
+  font-size: 16px;
+  color: var(--primary-darkest-blue);
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+}
+.input {
+  border: 1px solid var(--primary-darkest-blue);
+  height: 25px;
+  border-radius: 6px;
+  padding: 4px;
+}
+.event-container {
+  border-radius: 10px;
+  padding: 16px;
+  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
+}
+.event-main {
   display: flex;
   justify-content: center;
-  align-items: center;
-  padding: 50px;
-}
-.login-body {
-  width: 500px;
-  background-color: var(--lightmode-bg-color);
-  padding: 50px 70px;
-  box-shadow: 2px 0px 47px -4px rgba(3, 3, 3, 0.2);
-  border-radius: 8px;
-}
-.login-remember-ad-forget-pass {
-  align-items: flex-end;
-  justify-content: space-between;
-}
-.forget-pass {
-  cursor: pointer;
+  margin: 50px 0;
 }

@@ -1,114 +1,127 @@
 import React, { useState } from "react";
 import "./create-event-page.css";
 import { Link } from "react-router-dom";
+import { EventPage } from "../EventPage/EventPage";
+import { useEvent } from "../../context/EventContext";
 
 export const CreateEventPage = () => {
-  const [eventDetails, setEventDetails] = useState({
-    eventName: "",
-    hostName: "",
-    time: "",
-    location: "",
-    photo: "",
-  });
+  const { eventDetails, setEventDetails } = useEvent();
+  //   console.log(eventDetail);
+  //   const [eventDetails, setEventDetails] = useState({
+  //     eventName: "",
+  //     hostName: "",
+  //     time: "",
+  //     location: "",
+  //     photo: "",
+  //   });
 
   return (
     <>
-      <main Name="event-main">
+      <main className="event-main">
         <div className="event-container">
           <div className="event-body">
-            <p className="h3 color capitalize fW-700 text-center"></p>
-            <div className="input-box mgT-20">
-              {/* <div>{errorMessage.message}</div> */}
-              <label for="email" className="textarea-label">
+            <p className="Create-Event-Heading">Fill Event Details</p>
+            <div className="event-details">
+              <label for="name" className="textarea-label">
                 Event name
               </label>
               <input
-                id="email"
-                type="email"
+                id="name"
+                type="text"
                 className="input"
-                placeholder="you@example.com"
                 value={eventDetails.email}
                 valide
-                // onChange={(e) => {
-                //   seteventDetails({ ...eventDetails, email: e.target.value });
-                //   console.log(eventDetails);
-                // }}
+                onChange={(e) => {
+                  setEventDetails({
+                    ...eventDetails,
+                    eventName: e.target.value,
+                  });
+                  console.log(eventDetails);
+                }}
               />
             </div>
 
-            <div className="input-box mgT-20">
-              <label for="password" className="textarea-label">
+            <div className="event-details">
+              <label for="HostName" className="textarea-label">
                 Host name
               </label>
               <input
-                id="password"
-                type="password"
+                id="HostName"
+                type="text"
+                className="input"
+                valide
+                value={eventDetails.password}
+                onChange={(e) => {
+                  setEventDetails({
+                    ...eventDetails,
+                    hostName: e.target.value,
+                  });
+                }}
+              />
+            </div>
+
+            <div className="event-details">
+              <label for="date" className="textarea-label">
+                Start time
+              </label>
+              <input
+                id="date"
+                type="date"
                 className="input"
                 placeholder="**********"
                 valide
                 value={eventDetails.password}
-                // onChange={(e) => {
-                //   seteventDetails({
-                //     ...eventDetails,
-                //     password: e.target.value,
-                //   });
-                // }}
+                onChange={(e) => {
+                  setEventDetails({
+                    ...eventDetails,
+                    time: e.target.value,
+                  });
+                }}
               />
             </div>
 
-            <div className="input-box mgT-20">
+            <div className="event-details">
+              <label for="date" className="textarea-label">
+                End time
+              </label>
+              <input
+                id="date"
+                type="date"
+                className="input"
+                valide
+                value={eventDetails.password}
+                onChange={(e) => {
+                  setEventDetails({
+                    ...eventDetails,
+                    time: e.target.value,
+                  });
+                }}
+              />
+            </div>
+
+            <div className="event-details">
               <label for="password" className="textarea-label">
-                Start and End time/date
+                Location
               </label>
               <input
                 id="password"
                 type="password"
                 className="input"
-                placeholder="**********"
                 valide
                 value={eventDetails.password}
-                // onChange={(e) => {
-                //   seteventDetails({
-                //     ...eventDetails,
-                //     password: e.target.value,
-                //   });
-                // }}
+                onChange={(e) => {
+                  setEventDetails({
+                    ...eventDetails,
+                    location: e.target.value,
+                  });
+                }}
               />
             </div>
-
-            <div className="input-box mgT-20">
-              <label for="password" className="textarea-label">
-                Location and Event photo
-              </label>
-              <input
-                id="password"
-                type="password"
-                className="input"
-                placeholder="**********"
-                valide
-                value={eventDetails.password}
-                // onChange={(e) => {
-                //   seteventDetails({
-                //     ...eventDetails,
-                //     password: e.target.value,
-                //   });
-                // }}
-              />
-            </div>
-            {/* {console.log(eventDetails)} */}
-            <div className="event-remember-ad-forget-pass dis-f">
-              <div className="forget-pass">
-                <span
-                  className="textarea-label"
-                  //   onClick={(e) => {
-                  //     e.preventDefault();
-                  //     seteventDetails(testeventDetails);
-                  //   }}
-                >
-                  Next
-                </span>
-              </div>
-            </div>
+            {console.log(eventDetails)}
+            {/* <EventPage varia={eventDetails} /> */}
+            <Link to="/event">
+              <button className="create-my-event-btn mrg-top16 ">Next </button>
+            </Link>
           </div>
         </div>
       </main>

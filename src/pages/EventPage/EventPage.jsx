@@ -2,7 +2,9 @@ import "./event-page.css";
 import { BsCalendar } from "react-icons/bs";
 import { MdKeyboardArrowRight } from "react-icons/md";
 import { HiOutlineLocationMarker } from "react-icons/hi";
+import { useEvent } from "../../context/EventContext";
 export const EventPage = () => {
+  const { eventDetails } = useEvent();
   return (
     <>
       <div>
@@ -13,9 +15,9 @@ export const EventPage = () => {
         />
       </div>
       <div className="event-details-container">
-        <div className="event-heading">Birthday Bash</div>
+        <div className="event-heading">{eventDetails.eventName}</div>
         <div className="event-subHeading mrg-top4">
-          Hosted by <span>Elysia</span>
+          Hosted by <span>{eventDetails.hostName}</span>
         </div>
         <div className="event-date mrg-top32">
           <div className="event-icon">
@@ -36,7 +38,7 @@ export const EventPage = () => {
             <HiOutlineLocationMarker />
           </div>
           <div className="event-date-details">
-            <div className="date-time">Street name</div>
+            <div className="date-time">{eventDetails.location}</div>
             <div className="date-time-subheading">Suburb, State, Postcode</div>
           </div>
           <div className="more-details-arrow">
