@@ -1,0 +1,15 @@
+:root {
+  --primary-darkest-blue: #240d57;
+  --primary-dark-blue: #501fc1;
+  --primary-light-blue: #8456ec;
+  --primary-pink: #e87bf8;
+
+  --secondary-purple: #ccb6ff;
+  --secondary-light-purple: #ede5ff;
+  --secondary-lightest-purple: #f6f2ff;
+
+  --baby-pink-alert: #ffd7e0;
+  --baby-red-alert: #e61445;
+  --baby-light-green-alert: #d3ffe2;
+  --baby-dark-green-alert: #00805e;
+}
